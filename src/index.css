@@ -1,1 +1,333 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-overlay: rgba(6, 10, 40, 0.65);
+  --accent: #ff7a3c;
+  --accent-2: #4dd0ff;
+  --text-main: #ffffff;
+  --text-muted: #c4d0ff;
+  --card-bg: rgba(9, 15, 55, 0.96);
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --radius-xl: 32px;
+  --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.55);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+    "SF Pro Text", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text-main);
+  background: #020616;
+}
+
+/* Fullscreen hero */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 122, 60, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(77, 208, 255, 0.3),
+      transparent 55%
+    ),
+    linear-gradient(to bottom right, var(--bg-overlay), #020617);
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1120px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 32px 32px 40px;
+  background: radial-gradient(
+        circle at top right,
+        rgba(255, 255, 255, 0.06),
+        transparent 50%
+      )
+      border-box,
+    linear-gradient(140deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9))
+      border-box;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  backdrop-filter: blur(30px) saturate(150%);
+}
+
+/* Header / logo */
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  <meta name="theme-color" content="#020617" />
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 18px;
+  background: conic-gradient(
+    from 140deg,
+    #ff7a3c,
+    #ffd166,
+    #4dd0ff,
+    #6366f1,
+    #ff7a3c
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 24px;
+  color: #0b1024;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.logo-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Main text */
+
+.hero-text {
+  max-width: 480px;
+}
+
+.hero-text h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+
+.hero-text h1 br {
+  display: block;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), #ffd166);
+  color: #0b1024;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+}
+
+/* bottom “pills” like small labels */
+
+.hero-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.hero-pill {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.12),
+      transparent 60%
+    )
+    #02061780;
+  backdrop-filter: blur(16px);
+}
+
+.pill-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pill-caption {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Contact section */
+
+.contact-section {
+  background: radial-gradient(circle at top, #0b1120, #020617 60%);
+  padding: 64px 16px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-soft);
+  padding: 32px 28px 36px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.14s ease, box-shadow 0.14s ease;
+}
+
+.contact-form textarea {
+  border-radius: 18px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 1px rgba(77, 208, 255, 0.4);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-2), #6366f1);
+  color: #020617;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.75);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-content {
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .hero-header {
+    margin-bottom: 28px;
+  }
+
+  .hero-footer {
+    margin-top: 28px;
+  }
+
+  .field-row {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    padding: 24px 20px 28px;
+  }
+}
 

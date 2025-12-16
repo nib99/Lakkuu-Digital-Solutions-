@@ -4,87 +4,33 @@
     <meta charset="UTF-8" />
     <title>Lakkuu Digital Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Lakkuu Digital Solutions – Locally Rooted, Digitally Powered technology services."
-    />
-    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div id="root">
-      <main class="hero">
-  <!-- Background video -->
-  <video
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    poster="/lakkuu-bg.jpg"
-  >
-    <source src="/lakkuu-bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <main class="hero">
+      <!-- Background video -->
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="./lakkuu-bg.mp4" type="video/mp4" />
+      </video>
 
-  <!-- Overlay -->
-  <div class="hero-overlay"></div>
+      <div class="hero-overlay"></div>
 
-  <!-- Content -->
-  <div class="hero-content">
-          <header class="hero-header">
-            <div class="logo-mark">L</div>
-            <div class="logo-text">
-              <span class="logo-title">Lakkuu Digital Solutions</span>
-              <span class="logo-sub">Locally Rooted, Digitally Powered</span>
-            </div>
-          </header>
+      <div class="hero-content">
+        <h1>Lakkuu<br>Digital<br>Solutions</h1>
+        <p>
+          Designing and building secure digital products for businesses that
+          want to grow in a connected Africa.
+        </p>
+        <a href="#contact" class="hero-btn">Talk to our team</a>
+      </div>
+    </main>
 
-          <section class="hero-text">
-            <h1>
-              Lakkuu<br />
-              Digital<br />
-              Solutions
-            </h1>
-            <p>
-              Designing and building secure digital products for businesses that
-              want to grow in a connected Africa.
-            </p>
-            <a href="#contact" class="hero-btn">Talk to our team</a>
-          </section>
-
-          <footer class="hero-footer">
-            <div class="hero-pill">
-              <span class="pill-label">Vision 2030 Ready</span>
-              <span class="pill-caption">Cloud, Mobile, Data & Support</span>
-            </div>
-            <div class="hero-pill">
-              <span class="pill-label">Services</span>
-              <span class="pill-caption">Web • Mobile • Integrations</span>
-            </div>
-          </footer>
-        </div>
-      </main>
-
-      <section id="contact" class="contact-section">
-        <div class="contact-card">
-          <h2>Start your project</h2>
-          <p>
-            Share your idea and Lakkuu Digital Solutions will help you design,
-            build, and deploy secure digital platforms.
-          </p>
-          <form class="contact-form">
-            <div class="field-row">
-              <input type="text" placeholder="Full name" required />
-              <input type="email" placeholder="Work email" required />
-            </div>
-            <input type="text" placeholder="Company / Organization" />
-            <textarea rows="3" placeholder="Project idea or challenge"></textarea>
-            <button type="submit">Send request</button>
-          </form>
-        </div>
-      </section>
-    </div>
-    <script type="module" src="/src/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
-
